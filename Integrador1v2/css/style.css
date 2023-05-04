@@ -1,0 +1,61 @@
+textarea::placeholder{
+    font-size: 25px;
+}
+footer{
+    background: linear-gradient(to right, rgb(108, 117, 125), pink);
+}
+
+@media (max-width: 1920px){
+    .carousel-caption{
+        width: 40%;
+    }
+}
+
+@media (max-width: 1280px){
+    #carousel1{
+        margin-top: 10%;
+    }
+    .carousel-caption{
+        width: 40%;
+        top: 20%;
+        right: 10%;
+    }
+
+}
+
+@media (max-width: 820px){
+    #carousel1{
+        margin-top: 10%;
+    }
+    .carousel-caption{
+        width: 60%;
+        top: 20%;
+        right: 10%;
+    }
+}
+
+@media (max-width: 600px){
+    #carousel1{
+        margin-top: 25%;
+    }
+    .carousel-caption{
+        width: 100%;
+        top: 0;
+        right: 5%;
+    }
+
+    .carousel-caption > h3{
+        font-size: small;
+    }
+    .carousel-caption > p{
+        font-size: smaller;
+    }
+
+}
+
+@media (max-width: 460px){
+    #carousel1{
+        margin-top: 45%;
+    }
+}
+
