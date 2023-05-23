@@ -1,3 +1,7 @@
+
+.lh-lrg{
+    line-height: 2;
+}
 textarea::placeholder{
     font-size: 25px;
 }
@@ -5,6 +9,40 @@ footer{
     background: linear-gradient(to right, rgb(108, 117, 125), pink);
 }
 
+.container-cards-tickets{
+    margin-top: 20%;
+}
+.card-container{
+    perspective: 800px;
+    position: relative !important;
+    width: 330px !important;
+    height: 140px !important;
+}
+
+.card-container:hover .front{
+    transform: rotateY(180deg);
+}
+.card-container:hover .back{
+    transform: rotateY(0deg);
+}
+.back{
+    transform: rotateY(-180deg);
+}
+
+.back, .front{
+    position: absolute !important;
+    transition: all .5s;
+    width: 90%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+.title-offer-tickets{
+    position: relative;
+    top: 25px;
+}
+footer{
+    margin-top: 27px;
+}
 @media (max-width: 1920px){
     .carousel-caption{
         width: 40%;
@@ -21,9 +59,18 @@ footer{
         right: 10%;
     }
 
+    footer{
+        margin-top: 63px;
+    }
+    .back .card-body p{
+        padding: 0.8rem !important;
+    }
 }
 
-@media (max-width: 820px){
+@media (max-width: 820px){    
+    .container{
+        margin-top: 150px;
+    }
     #carousel1{
         margin-top: 10%;
     }
@@ -32,9 +79,16 @@ footer{
         top: 20%;
         right: 10%;
     }
+    .back .card-body{
+        font-size: 16px;
+        padding: 0 !important;
+    }
 }
 
 @media (max-width: 600px){
+    .container{
+        margin-top: 200px;
+    }
     #carousel1{
         margin-top: 25%;
     }
@@ -50,12 +104,25 @@ footer{
     .carousel-caption > p{
         font-size: smaller;
     }
+    .card-extended{
+        width: 100% !important;
+        padding-left: 25px !important;
+    }
 
+    .back .card-body p{
+        padding: 0.2rem !important;
+    }
 }
 
 @media (max-width: 460px){
+    .container{
+        margin-top: 250px;
+    }
     #carousel1{
         margin-top: 45%;
+    }
+    .back .card-body p{
+        padding: 0.2rem !important;
     }
 }
 

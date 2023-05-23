@@ -8,40 +8,12 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    
 </head>
 <body>
-  <header class="navbar navbar-expand-sm navbar-light bg-light fixed-top bg-dark">
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#opciones">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    
-    <!-- logo -->
-    <a class="navbar-brand d-md-flex align-items-center" href="#">
-      <img src="img/codoacodo-min.png" class="h-50 w-50 img-fluid" alt="">
-      <h2 class="text-white"><span>Conf Bs As</span></h1>
-    </a>
-    
-    <!-- enlaces -->
-    <nav class="collapse navbar-collapse justify-content-end" id="opciones">   
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link active text-light" href="#">La conferencia</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-secondary" href="#">Los operadores</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-secondary" href="#">El lugar y la fecha</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-secondary" href="#">Conviértete en orador</a>
-        </li>            
-        <li class="nav-item">
-          <a class="nav-link text-warning" href="#">Comprar tickets</a>
-        </li>            
-      </ul>
-    </nav>
-  </header>
+  <?php
+  include('layouts/header.php');
+  ?>
 
     <main>
 
@@ -108,7 +80,7 @@
             </div>
 
             <div class="d-md-flex container justify-content-center">
-              <div class="card mx-4">
+              <div class="card mx-4 shadow">
                 <img src="img/steve-min.jpg" class="card-img-top h-100" alt="steve">
                 <div class="card-body ">
                   <div class="d-lg-flex">
@@ -121,7 +93,7 @@
                   
                 </div>
               </div>
-              <div class="card mx-4">
+              <div class="card mx-4 shadow">
                 <img src="img/bill-min.jpg" class="card-img-top" alt="bill">
                 <div class="card-body ">
                   <div class="d-lg-flex">
@@ -134,7 +106,7 @@
                   
                 </div>
               </div>
-              <div class="card mx-4">
+              <div class="card mx-4 shadow">
                 <img src="img/ada-min.jpeg" class="card-img-top" alt="ada">
                 <div class="card-body">
                   <div class="d-lg-flex">
@@ -165,7 +137,7 @@
             </aside>
         </container>
 
-        <container class="container mx-md-auto">
+        <container class="container ">
           <div class="text-center text-uppercase">
             <p class="font-weight-light">Convierteté en un</p>
             <p class="font-weight-bold h2">Orador</p>
@@ -178,43 +150,33 @@
           <div class="container w-50">
             <form class="form-row" action="post">
               <div class="form-group col-lg-6">
-                <input type="text" required placeholder="Nombre" class="form-control">
+                <input type="text" required placeholder="Nombre" class="form-control shadow">
               </div>
 
               <div class="form-group col-lg-6">
-                <input type="text" required placeholder="Apellido" class="form-control">
+                <input type="text" required placeholder="Apellido" class="form-control shadow">
               </div>
 
               <div class="form-group col-lg-12" style="height: 6em; ">
-                <textarea class="form-control h-100" required placeholder="Sobre qué quieres hablar?"></textarea>
+                <textarea class="form-control shadow h-100" required placeholder="Sobre qué quieres hablar?"></textarea>
               </div>
 
               <div class="form-group col-lg-12">
-                <input type="submit"  class="form-control btn-warning border-1 rounded text-white container" style="font-size: 20px;">
+                <input type="submit"  class="form-control shadow btn-warning border-1 rounded text-white container btns" style="font-size: 20px;">
               </div>
             </form>
           </div>
         </container>
         
-        <footer class="align-middle d-flex container-fluid bg-dark justify-content-center p-4">
-          <nav class="navbar">
-            <ul class="nav  align-items-center">
-              <li class="nav-item"><a href="#" class="nav-link text-white">Preguntas<br>frecuentes</a></li>
-              <li class="nav-item"><a href="#"  class="nav-link text-white">Contáctanos</a></li>
-              <li class="nav-item"><a href="#"  class="nav-link text-white">Prensa</a></li>
-              <li class="nav-item"><a href="#"  class="nav-link text-white">Conferencia</a></li>
-              <li class="nav-item"><a href="#"  class="nav-link text-white">Términos y<br>condiciones</a></li>
-              <li class="nav-item"><a href="#"  class="nav-link text-white">Privacidad</a></li>
-              <li class="nav-item"><a href="#"  class="nav-link text-white">Estudiantes</a></li>
-            </ul>
-          </nav>
-
-        </footer>
+        <?php
+        include('layouts/footer.php');
+        ?>
 
     </main>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>  
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="javascript/script.js"></script>
 </body>
 </html>
